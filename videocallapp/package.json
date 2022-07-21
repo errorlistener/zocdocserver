@@ -1,5 +1,5 @@
 {
-  "name": "wat",
+  "name": "zocdocclone",
   "version": "1.0.0",
   "description": "wat backend",
   "main": "index.js",
@@ -7,10 +7,6 @@
     "start": "node index.js"
   },
   "author": "SC",
-  "license": "ISC",
-  "dependencies": {
+  "license": "ISC"
 
-    "express": "^4.17.1",
-    "socketio": "^1.0.0"
-  }
 }
