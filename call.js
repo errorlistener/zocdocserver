@@ -11,8 +11,8 @@ let peer
 function init(userId) {
     peer = new Peer(userId, {
         host: '192.168.43.242',
-        port: 9000,
-        path: '/videocallapp'
+        port: 20800,
+        path: '/'
     })
 
     listen()
