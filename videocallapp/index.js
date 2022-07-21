@@ -1,3 +1,7 @@
+var app=require('express')();
+var http=require('http').Server(app);
+
+
 
 app.get('/',function(req,res){
     res.sendFile('index.html',{root: __dirname})
