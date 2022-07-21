@@ -10,7 +10,7 @@ remoteVideo.onplaying = () => { remoteVideo.style.opacity = 1 }
 let peer
 function init(userId) {
     peer = new Peer(userId, {
-        host: '31.223.48.22',
+        host: 'https://zocdocclone.herokuapp.com',
         port: 3000,
         path: '/videocallapp'
     })
