@@ -5,7 +5,9 @@ var io=require('socket.io')(http);
 app.get('/',function(req,res){
     res.sendFile('index.html',{root: __dirname})
 });
-
+app.get('/call.html',function(req,res){
+    res.sendFile('call.html',{root: __dirname})
+});
 
 function User(id,uniqueCode,qrCode)
 {
