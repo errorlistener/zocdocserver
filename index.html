@@ -1,0 +1,63 @@
+<script src="/socket.io/socket.io.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+
+    </head>
+    <body>
+        <div id="form" style=" width: 200px; margin: 0 auto">
+            <label for="fname" style="width: 200px; margin: 0 auto">Code (Example:1234)</label>
+            <input type="text" id="text"  style="margin-top: 10px;"><br>
+            <button onclick="listenCode()" style="margin-top: 20px;">Kod Oluştur</button>
+            <p>Ekranda gördüğünüz 4 haneli kodu giriniz.</p>
+        </div>
+
+        <div id="qrcode" width="120" height="90" style=" width: 200px; margin: 0 auto"></div>
+
+        <script>
+            var socket=io();
+            
+            var qrcode = new QRCode("qrcode");
+
+
+            function listenCode()
+            {
+                var elText = document.getElementById("text");
+                socket.off();
+
+                /*socket.on('get_last_qr_code',function(data){
+                    if(data!=null)
+                    {
+                        makeCode(data);
+                    } 
+                    else{
+                        alert('deger null bro');
+                    }
+                    
+                });*/
+               
+                socket.emit('get_last_qr_code',elText.value);
+
+ 
+                socket.on(elText.value,function(data){ 
+                    makeCode(data);
+                });
+            }
+
+            function makeCode (data) {    
+                //var elText = document.getElementById("text");
+                //if (!elText.value) {
+                //    elText.focus();
+                //    return;
+                //}
+                qrcode.makeCode(data);
+            }
+
+            makeCode();
+        </script>
+    </body>
+</html>
