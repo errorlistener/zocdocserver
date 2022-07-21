@@ -84,5 +84,5 @@ io.on('connection',function(socket){
 
 
 http.listen(process.env.PORT || 3000,function(){
-    console.log('server start from 3000 port!'); 
+    console.log('server start from 3000 port!'+process.env.PORT); 
 });
