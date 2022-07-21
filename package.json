@@ -1,0 +1,16 @@
+{
+  "name": "wat",
+  "version": "1.0.0",
+  "description": "wat backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "SC",
+  "license": "ISC",
+  "dependencies": {
+    "arraylist": "^0.1.0",
+    "express": "^4.17.1",
+    "socketio": "^1.0.0"
+  }
+}
