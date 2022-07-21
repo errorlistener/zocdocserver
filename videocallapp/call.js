@@ -11,7 +11,7 @@ let peer
 function init(userId) {
     peer = new Peer(userId, {
         host: 'https://zocdocclone.herokuapp.com',
-        port: 9000,
+        port: 3000,
         path: '/videocallapp'
     })
 
