@@ -12,7 +12,7 @@ function init(userId) {
     peer = new Peer(userId, {
         secure: true,
         host: 'zocdocclone.herokuapp.com',
-        port: 443,
+        
 
 
     })
