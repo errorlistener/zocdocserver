@@ -8,7 +8,15 @@ app.get('/',function(req,res){
 app.get('/call.html',function(req,res){
     res.sendFile('call.html',{root: __dirname})
 });
-
+app.get('/call.js',function(req,res){
+    res.sendFile('call.js',{root: __dirname})
+});
+app.get('/peerjs.js',function(req,res){
+    res.sendFile('peerjs.js',{root: __dirname})
+});
+app.get('/call.js',function(req,res){
+    res.sendFile('style.css',{root: __dirname})
+});
 function User(id,uniqueCode,qrCode)
 {
     this.id=id;
