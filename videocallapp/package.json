@@ -2,7 +2,7 @@
   "name": "wat",
   "version": "1.0.0",
   "description": "wat backend",
-  "main": "index.js",
+  "main": "./videocallapp/index.js",
   "scripts": {
     "start": "node ./videocallapp/index.js"
   }
